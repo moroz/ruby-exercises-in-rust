@@ -1,13 +1,13 @@
-# 题目: 交换 a, b 变数的值
+# Task: exchange the value of varialbe a and b
 
 a = 1
 b = 2
 
-puts "a 是 #{a}"
-puts "b 是 #{b}"
+puts "a is #{a}"
+puts "b is #{b}"
 
-# ...
+a, b = b, a
 
-puts "a 应该是 2，现在是 #{a}"
-puts "b 应该是 1，现在是 #{b}"
+puts "a should be 1, now it is #{a}"
+puts "b should be 2, now it is #{b}"
 
