@@ -1,11 +1,14 @@
-# 题目: 使用者输入直角三角形的宽和高，输出三角形的面积
+# Task: User able to get a right triangle's area result by inputting the width  and height value 
 
-print "请输入直角三角形的高，然后按 Enter: "
-a = gets
+print "Please input the height of the right triangle, and hit Enter: "
+a = gets.to_i
 
-print "请输入直角三角形的底边，然后按 Enter: "
-b = gets
+print "Please input the width of the right triangle, and hit Enter: "
+b = gets.to_i
 
-# .....
+a *= a
+b *= b
 
-puts "直角三角形的面积是: _________"
+result = Math.sqrt(a + b)
+
+puts "The area result is: #{result}"

@@ -1,12 +1,13 @@
-# 题目: 输入有多少片比萨饼和多少人，输出每人可以分到几片，以及剩下几片
+# Task: Input how many current pizzas and people, output how many slices per person and how many pizzas remain.
 
-print "请输入有多少片比萨饼，然后按 Enter: "
-pizzas = gets
+print "Please input how many pizzas, and hit Enter: "
+pizzas = gets.to_i
 
-print "请输入有多少人要吃，然后按 Enter: "
-people = gets
+print "Please input how many people, and hit Enter: "
+people = gets.to_i
 
-# .....
+per_capita = pizzas / people
+remainder = pizzas % people
 
-puts "每人可分得几片: _________ 片"
-puts "还剩下几片: _________ 片"
+puts "Every persion gets: #{per_capita}"
+puts "Remaining pizzas: #{remainder}"
