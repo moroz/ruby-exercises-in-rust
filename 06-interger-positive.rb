@@ -1,10 +1,20 @@
-# 题目: 输入一个数字 x，请判断是否正数、零或负数，以及是不是偶数
+# Identify a number whether is zero, positive or negative number, and even or  odd.
 
+print "Please input an integer, and hit Enter:"
+x = gets.to_i
 
-print "请输入一个整数，然后按 Enter: "
-x = gets
+def zero?(num)
+  if num < 0
+    "negative"
+  elsif num > 0
+    "positive"
+  else
+    "zero"
+  end
+end
 
-# ....
+def even?(num)
+ num % 2 == 0 ? "even" : "odd"
+end
 
-puts "这个数是_____ (正数或零或负数)"
-puts "这个数是_____ (偶数或奇数)"
+puts "This is a '#{zero?(x)}' and '#{even?(x)}' number"

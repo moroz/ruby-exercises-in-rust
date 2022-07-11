@@ -1,17 +1,28 @@
-# 题目: 输入体重和身高，输出身体质量指数(BMI)和建议
-# BMI 公式为 bmi = ( 体重 / (身高x身高) )，单位是公斤和米
-# 如果 BMI < 18.5，显示过轻
-# 如果 BMI >= 24，显示过重
-# 如果 BMI 介于 18.5 ~ 24，显示正常
+# Task: BMI calculater in metric
+print "Please input your weight(kilograms), and hit Enter: "
+weight = gets.to_i
 
-print "请输入您的体重(公斤)，然后按 Enter: "
-weight = gets
+print "Please input your height(centimeters), and hit Enter: "
+height = gets.to_i
 
-print "请输入您的身高(厘米)，然后按 Enter: "
-height = gets
+def bmi_calulator(weight, height)
+  height = (height / 100.00) **2
+  (weight / height).round(1)
+end
 
-# .....
+def bmi_category(index)
+  case index
+  when 0..18.5
+    "Underweight"
+  when (18.6..24.9)
+    "Normal weight"
+  when (25.0..29.9)
+    "Overweight"
+  else
+    "Obesity"
+  end
+end
 
-puts "您的 BMI 是: _________"
+bmi = bmi_calulator(weight, height)
 
-puts "您的 BMI 结果是: _________(过轻或正常或过重)"
+puts "Your BMI index is: #{bmi}, #{bmi_category(bmi)}."

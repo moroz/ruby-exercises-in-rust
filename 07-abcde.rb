@@ -1,22 +1,30 @@
-# 题目: 使用者输入 x,y,z，请根据以下的判断输出结果
-# 当 x < 0 输出 "A"
-# 当 x > 0，且
-#   当 y > 0，且
-#     当 z > 0 输出 "B"
-#     当 z < 0 输出 "C"
-#   当 y < 0
-#     当 z > 0 输出 "D"
-#     当 z < 0 输出 "E"
+# Task: Input x,y,z and output a speicifc result
+# when x < 0, output "A"
+# when x > 0, and
+#   when y > 0, and
+#     when z > 0 output "B"
+#     when z < 0 output "C"
+#   when y < 0
+#     when z > 0 output "D"
+#     when z < 0 output "E"
 
-print "请输入一个整数x，然后按 Enter: "
-x = gets
+print "Please input an integar X, then hit Enter: "
+x = gets.to_i
 
-print "请输入一个整数y，然后按 Enter: "
-y = gets
+print "Please input an integar Y, then hit Enter: "
+y = gets.to_i
 
-print "请输入一个整数z，然后按 Enter: "
-z = gets
+print "Please input an integar Z, then hit Enter: "
+z = gets.to_i
 
-# ....
-
-puts "结果是________(A或B或C或D或E)"
+def abcde(x, y, z)
+  if z < 0
+    y < 0 ? "E" : "C" 
+  elsif z > 0
+    y > 0 ? "B" : "D"
+  else
+    "A"
+  end
+end
+  
+puts "The result is #{abcde(x, y, z)}"
