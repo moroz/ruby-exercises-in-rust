@@ -18,12 +18,12 @@ print "Please input an integar Z, then hit Enter: "
 z = gets.to_i
 
 def abcde(x, y, z)
-  if z < 0
+  if x < 0
+    "A"
+  elsif z < 0
     y < 0 ? "E" : "C" 
   elsif z > 0
     y > 0 ? "B" : "D"
-  else
-    "A"
   end
 end
   

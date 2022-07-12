@@ -1,14 +1,13 @@
-# 题目: 使用者输入 x,y,z，请输出三个数中最大的数
+# Task: Allow the user to input at least three numbers, and pick out the biggest one
 
-print "请输入一个数字x，然后按 Enter: "
-x = gets
+arr = []
+print "Program will be finished by hitting Enter
+"
+loop do
+  print "Please input a number: "
+  line = gets
+  break if line.chomp.empty?
+  arr << line.to_i
+end
 
-print "请输入一个数字y，然后按 Enter: "
-y = gets
-
-print "请输入一个数字z，然后按 Enter: "
-z = gets
-
-# ....
-
-puts "最大的数是 ________(x或y或z)"
+puts "The maximum number is #{arr.max}"
