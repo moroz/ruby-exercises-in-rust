@@ -1,19 +1,19 @@
-# 题目: 使用者输入 x,y,z，请输出三个数中最大的数
+# Task: User able to input x, Y, Z numbers in turn, and pick out the biggest one
 
 def find_max(x, y, z)
+  arr = [x, y, z].map { |i| i.to_i }
+  arr.max
 end
 
-print "请输入一个数字x，然后按 Enter: "
+print "Please input a number x, and hit Enter: "
 x = gets
 
-print "请输入一个数字y，然后按 Enter: "
+print "Please input a number y, and hit Enter: "
 y = gets
 
-print "请输入一个数字z，然后按 Enter: "
+print "Please input a number z, and hit Enter: "
 z = gets
-
-# ....
 
 answer = find_max(x,y,z)
 
-puts "最大的数是 #{answer}"
+puts "The maximum number is #{answer}"
