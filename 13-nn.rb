@@ -1,11 +1,11 @@
-# 题目: 输入一个数字 N，输出 N * N 乘法表
+# Task: Input a number N, output N * N multiplication table
 
-print "请输入数字 N，然后按 Enter: "
-n = gets
+print "Please input a number N, and hit Enter: "
+n = gets.to_i
 
-# while ( ... )
-#   while ( ...)
-#
-#   end
-# end
+i = 1
+while ( i <= n )
+  p "#{ n } * #{ i } = #{ n * i }"
+  i += 1
+end
 
