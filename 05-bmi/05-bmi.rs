@@ -11,15 +11,13 @@ fn read_float() -> f64 {
     io::stdin()
         .read_line(&mut buf)
         .expect("Failed to read line from STDIN!");
-    buf.trim()
-        .parse()
-        .expect("Failed to parse input as unsigned integer")
+    buf.trim().parse().expect("Failed to parse input as float")
 }
 
 fn main() {
-    println!("请输入您的体重(公斤)，然后按 Enter: ");
+    print!("请输入您的体重(公斤)，然后按 Enter: ");
     let weight = read_float();
-    println!("请输入您的身高(厘米)，然后按 Enter: ");
+    print!("请输入您的身高(厘米)，然后按 Enter: ");
     let height = read_float() / 100.0;
 
     if height == 0.0 {
